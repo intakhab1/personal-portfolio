@@ -31,9 +31,9 @@ btnmode.addEventListener("click", () => {
     }
   });
 
+let darkMode = false; // Then Apply Dark Mode
 // Initialise UI
 function init(){
-    let darkMode = false; // Then Apply Dark Mode
   
     //1- WITHOUT CONSIDERING USER PREFERENCE:-
     const value = localStorage.getItem("dark-mode");
