@@ -20,6 +20,7 @@
 ## Features 📋
 
 ⚡️ Fully Responsive\
+⚡️ Dark mode functionality\
 ⚡️ Valid HTML5 & CSS3\
 ⚡️ Typing animation\
 ⚡️ Functional Contact Form
