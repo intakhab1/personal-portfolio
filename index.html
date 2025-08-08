@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intakhab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
+
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+
+        <img src="./images/intakhab_light.png" alt="Logo"
+        class="w-32 cursor-pointer mr-14 dark:hidden">
+
+        <img src="./images/intakhab_dark.png" alt="Logo"
+        class="w-32 cursor-pointer mr-14 hidden dark:block">
+
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo
+        dark:border dark:border-white/50 dark:bg-transparent ">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact me</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+        <button onclick="toggleTheme()">
+            <img src="./images/moon_icon.png" alt="" class="w-6 dark:hidden">
+            <img src="./images/sun_icon.png" alt="" class="w-6 hidden dark:block">
+        </button>
+
+        <a href="#contact" 
+        class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50">
+        Contact 
+        <img src="./images/arrow-icon.png" alt="" class="w-3 dark:hidden">
+        <img src="./images/arrow-icon-dark.png" alt="" class="w-3 hidden dark:block">
+    </a>
+
+        <button class="block md:hidden ml-3" onclick="openMenu()">
+            <img src="./images/menu-black.png" alt="" class="w-6 dark:hidden">
+            <img src="./images/menu-white.png" alt="" class="w-6 hidden dark:block">
+        </button>
+
+        </div>
+<!-- ----- mobile menu ------  -->
+        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-gray-100 transition duration-500 font-Ovo dark:bg-black dark:text-white">
+
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden">
+
+                <img src="./images/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block">
+            </div>
+
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#projects" onclick="closeMenu()">My Projects</a></li>
+            <li><a href="#interests" onclick="closeMenu()">Interests</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
+        </ul>
+    
+</nav>
+
+<!-- ------------ home -----------  -->
+
+<div id="home" class="w-full px-[5%] sm:px-[12%] py-10 scroll-mt-20 min-h-screen flex flex-col justify-center">
+    <h2 class="text-center text-3xl mt-20 md:text-5xl font-Ovo mb-8 md:mb-12">Hi, I'am Intakhab</h2>
+
+    <div class="flex w-full flex-col lg:flex-row items-center gap-8 md:gap-20 my-8 md:my-5">
+        <div class="w-full sm:w-auto mx-auto relative flex justify-center">
+            <img src="./images/pic_white.png" alt="Profile picture" 
+                 class="w-48 sm:w-64 md:w-80 rounded-full border-4 border-white shadow-lg -mt-8">
+        </div>
+        
+        <div class="flex-1 w-full">
+            <p class="mb-8 md:mb-10 max-w-2xl font-Ovo text-base md:text-lg">
+                I am currently pursuing post-graduation at IIT Kanpur, undertaking Machine Learning courses and specializing in Space, Planetary & Astronomical Sciences & Engineering. and hands-on internships experience at esteemed organizations like ISRO and Maruti Suzuki. My expertise includes Machine Learning and mern-stack web development, passionate about leveraging technology to solve real-world problems.
+            </p>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-2xl">
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-4 md:p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                    <img src="./images/edu-icon.png" alt="" class="w-6 md:w-7 mt-2 md:mt-3 dark:hidden">
+                    <img src="./images/edu-icon-dark.png" alt="" class="w-6 md:w-7 mt-2 md:mt-3 hidden dark:block">
+                    <h3 class="my-2 md:my-4 font-semibold text-gray-700 dark:text-white text-sm md:text-base">Education</h3>
+                    <p class="text-gray-600 text-xs md:text-sm dark:text-white/80">M.Tech IIT Kanpur 2025-2027</p>
+                </li>
+                
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-4 md:p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                    <img src="./images/project-icon.png" alt="" class="w-6 md:w-7 mt-2 md:mt-3 dark:hidden">
+                    <img src="./images/project-icon-dark.png" alt="" class="w-6 md:w-7 mt-2 md:mt-3 hidden dark:block">
+                    <h3 class="my-2 md:my-4 font-semibold text-gray-700 dark:text-white text-sm md:text-base">Projects</h3>
+                    <p class="text-gray-600 text-xs md:text-sm dark:text-white/80">Built more than 5 projects</p>
+                </li>
+
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-4 md:p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                    <img src="./images/code-icon.png" alt="" class="w-6 md:w-7 mt-2 md:mt-3 dark:hidden">
+                    <img src="./images/code-icon-dark.png" alt="" class="w-6 md:w-7 mt-2 md:mt-3 hidden dark:block">
+                    <h3 class="my-2 md:my-4 font-semibold text-gray-700 dark:text-white text-sm md:text-base">Languages</h3>
+                    <p class="text-gray-600 text-xs md:text-sm dark:text-white/80">C/C++, Python, JavaScript</p>
+                </li>
+            </ul>
+            
+            <h4 class="my-4 md:my-6 text-gray-700 font-Ovo dark:text-white/80 text-sm md:text-base">Connect with me</h4>
+
+            <div class="flex flex-row justify-center items-center gap-3 md:justify-start md:items-start md:h-auto">
+                <a href="#contact" class="px-6 md:px-10 py-2 md:py-3 border rounded-full bg-black text-white hover:bg-gray-900 dark:hover:bg-transparent dark:border-white dark:text-white border-black flex items-center gap-2 dark:border-transparent hover:-translate-y-1 duration-500 text-sm md:text-base">
+                    Contact me <img src="./images/right-arrow-white.png" alt="" class="w-3 md:w-4">
+                </a>
+
+                <a href="./myresume.pdf" download class="px-6 md:px-10 py-2 md:py-3 border rounded-full hover:bg-lightHover  border-gray-500 flex items-center gap-2 bg-white dark:text-black hover:-translate-y-1 duration-500 text-sm md:text-base">
+                    My resume <img src="./images/download-icon.png" alt="" class="w-3 md:w-4">
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- ------------ my projects ------------  -->
+<div id="projects" class="w-full px-[12%] py-10 scroll-mt-20">
+  <h2 class="text-center text-5xl font-Ovo">My Latest Projects</h2>
+  <p class="text-center max-w-2xl mx-auto mt-10 mb-12 font-Ovo">
+    Here, you'll find a curated selection of projects that demonstrate my skills in full-stack web development. From responsive user interfaces to robust server-side architectures, each project reflects my commitment to building efficient, scalable, and user-friendly web applications. I continuously strive to stay updated with the latest technologies and best practices.
+  </p>
+  
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 my-10 gap-5 dark:text-black">
+    
+    <!-- Project 1 -->
+    <div class="group relative aspect-square bg-[url('./images/skillnation.png')] bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
+      <div class="absolute inset-0 flex flex-col justify-end p-4">
+        <div class="bg-white rounded-md p-3 mx-2 mb-2 transition-all duration-500 group-hover:translate-y-0 translate-y-2">
+          <h2 class="font-semibold text-sm text-center">Skill Nation</h2>
+          <p class="text-xs text-gray-700 mb-2 text-center">EdTech Platform</p>
+          
+          <div class="flex gap-2 justify-center">
+            <a href="https://skillnation.vercel.app/" target="_blank" rel="noopener noreferrer" 
+               class="px-4 py-1.5 bg-black text-white text-xs rounded-full flex items-center justify-center hover:bg-gray-800 transition">
+                Live View
+            </a>
+            <a href="https://github.com/intakhab1/Skillnation" target="_blank" rel="noopener noreferrer"
+               class="px-4 py-1.5 border border-black text-xs rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Project 2 -->
+    <div class="group relative aspect-square bg-[url('./images/blogfront.png')] bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
+      <div class="absolute inset-0 flex flex-col justify-end p-4">
+        <div class="bg-white rounded-md p-3 mx-2 mb-2 transition-all duration-500 group-hover:translate-y-0 translate-y-2">
+          <h2 class="font-semibold text-sm text-center">Blogfront</h2>
+          <p class="text-xs text-gray-700 mb-2 text-center">Mern Blogging website</p>
+          <div class="flex gap-2 justify-center">
+            <a href="https://blogfront.vercel.app/" target="_blank" rel="noopener noreferrer" 
+               class="px-4 py-1.5 bg-black text-white text-xs rounded-full flex items-center justify-center hover:bg-gray-800 transition">
+                Live View
+            </a>
+            <a href="https://github.com/intakhab1/Blogfront" target="_blank" rel="noopener noreferrer"
+               class="px-4 py-1.5 border border-black text-xs rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Project 3 -->
+    <div class="group relative aspect-square bg-[url('./images/dev.png')] bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
+      <div class="absolute inset-0 flex flex-col justify-end p-4">
+        <div class="bg-white rounded-md p-3 mx-2 mb-2 transition-all duration-500 group-hover:translate-y-0 translate-y-2">
+          <h2 class="font-semibold text-sm text-center">Dev Detective</h2>
+          <p class="text-xs text-gray-700 mb-2 text-center">Find friends on Github</p>
+          <div class="flex gap-2 justify-center">
+            <a href="https://dev-detective-intakhab.netlify.app/" target="_blank" rel="noopener noreferrer" 
+               class="px-4 py-1.5 bg-black text-white text-xs rounded-full flex items-center justify-center hover:bg-gray-800 transition">
+                Live View
+            </a>
+            <a href="https://github.com/intakhab1/dev-detective" target="_blank" rel="noopener noreferrer"
+               class="px-4 py-1.5 border border-black text-xs rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Project 4 -->
+    <div class="group relative aspect-square bg-[url('./images/razorpay.png')] bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
+      <div class="absolute inset-0 flex flex-col justify-end p-4">
+        <div class="bg-white rounded-md p-3 mx-2 mb-2 transition-all duration-500 group-hover:translate-y-0 translate-y-2">
+          <h2 class="font-semibold text-sm text-center">Razorpay Frontend</h2>
+          <p class="text-xs text-gray-700 mb-2 text-center">Frontend UI/UX Design</p>
+          <div class="flex gap-2 justify-center">
+            <a href="https://razorpay-intakhab.netlify.app/" target="_blank" rel="noopener noreferrer" 
+               class="px-4 py-1.5 bg-black text-white text-xs rounded-full flex items-center justify-center hover:bg-gray-800 transition">
+                Live View
+            </a>
+            <a href="https://github.com/intakhab1/razorpay" target="_blank" rel="noopener noreferrer"
+               class="px-4 py-1.5 border border-black text-xs rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+ <!-- ----------- my interests ---------  -->
+  <div id="interests" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h2 class="text-center text-5xl font-Ovo">My interests</h2>
+    <p class="text-center max-w-2xl mx-auto mt-10 mb-12 font-Ovo">I am deeply interested in Machine Learning and Web Development, with a passion for building intelligent, user-centric applications. I enjoy applying machine learning techniques to solve real-world problems and integrating them into full-stack web solutions. My interests lie at the intersection of data-driven decision-making and scalable web technologies.</p>
+
+    <div class="grid grid-cols-auto gap-6 my-10">
+        <div class="border border-gray-400 rounded-lg px-8 py-12
+        hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover/50 dark:hover:shadow-white">
+            <img src="./images/web-icon.png" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Web design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Web development is the process of building, programming...</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/right-arrow.png" alt=""
+                class="w-4"></a>
+        </div>
+        <div class="border border-gray-400 rounded-lg px-8 py-12
+        hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover/50 dark:hover:shadow-white">
+            <img src="./images/mobile-icon.png" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Mobile app</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Web development is the process of building, programming...</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/right-arrow.png" alt=""
+                class="w-4"></a>
+        </div>
+        <div class="border border-gray-400 rounded-lg px-8 py-12
+        hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover/50 dark:hover:shadow-white">
+            <img src="./images/ui-icon.png" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">UI/ UX design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Web development is the process of building, programming...</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/right-arrow.png" alt=""
+                class="w-4"></a>
+        </div>
+
+        <div class="border border-gray-400 rounded-lg px-8 py-12
+        hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover/50 dark:hover:shadow-white">
+            <img src="./images/graphics-icon.png" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Graphics design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Web development is the process of building, programming...</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/right-arrow.png" alt=""
+                class="w-4"></a>
+        </div>
+
+    </div>
+  </div>
+
+<!-- ----- contact -------------  -->
+ <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-no-repeat bg-[length:90%_auto] bg-center
+ dark:bg-none">
+
+    <h4 class="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
+    <h2 class="text-center text-5xl font-Ovo">Get in touch</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I'd love to hear from you! If you have any questions, comments or feedback, please use the form below.</p>
+
+    <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
+
+
+<!------- Enter your web3 form access key below ------------>
+        <input type="hidden" name="access_key" value="61f79569-1599-4abe-bade-c584bbb169ed">
+
+        <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+            <input type="text" placeholder="Enter your name" class="flex-1 p-3 outline-none border-[0.5px] border-gray-500 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="name">
+
+            <input type="email" placeholder="Enter your email" class="flex-1 p-3 outline-none border-[0.5px] border-gray-500 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="email">
+        </div>
+        <textarea rows="6" placeholder="Enter your message" class="w-full p-4 outline-none border-[0.5px] border-gray-500 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90" required name="message"></textarea>
+
+        <button class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover">Submit now
+            <img src="./images/right-arrow-white.png" alt="" class="w-4">
+        </button>
+    </form>
+ </div>
+
+
+<!-- ----------- footer ---------  -->
+ <div class="mt-20">
+    <div class="text-center">
+        <img src="./images/intakhab_light.png" alt="" class="w-36 mx-auto mb-2 dark:hidden">
+        <img src="./images/intakhab_dark.png" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
+
+
+        <div class="w-max flex items-center gap-2 mx-auto">
+            <img src="./images/mail_icon.png" alt="" class="w-6 dark:hidden">
+            <img src="./images/mail_icon_dark.png" alt="" class="w-6 hidden dark:block">
+
+            intakhab25@iitk.ac.in
+        </div>
+    </div>
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+        <p>© 2025 Mohd Intakhab Alam. All rights reserved.</p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+            <li><a target="_blank" href="https://github.com/intakhab1">GitHub</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/intakhab08/">LinkedIn</a></li>
+            <li><a target="_blank" href="https://www.instagram.com/_intakhab08/">instagram</a></li>
+        </ul>
+    </div>
+ </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
